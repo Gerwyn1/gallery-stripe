@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@700&display=swap');
+*
+
+{
+    margin: 0;
+    padding: -0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    
+}
+#root{
+    background: #250D69;
+}
+
+
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: #250D69;
+}
+
+.box
+{
+    position: relative;
+    width: 780px;
+    height: 450px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.box::before{
+    content:'';
+    position: absolute;
+    top:-50%;
+    left:-50%;
+    width:780px;
+    height:420px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.box::after{
+    content:'';
+    position: absolute;
+    top:-50%;
+    left:-50%;
+    width:380px;
+    height:420px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.borderLine{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+.borderLine::before{
+    content:'';
+    position: absolute;
+    top:-50%;
+    left:-50%;
+    width:780px;
+    height:420px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#faba0c,#faba0c,#faba0c);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.borderLine::after{
+    content:'';
+    position: absolute;
+    top:-50%;
+    left:-50%;
+    width:380px;
+    height:420px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#faba0c,#faba0c,#faba0c);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.box form
+{
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column; 
+    
+}
+.errorText{
+    color:red;
+    font: 'Roboto';
+    font-size: 10px;
+}
+.inp{
+    border:hidden ;
+    margin: auto;
+    height:40px;
+    width:83%;
+    box-shadow: #1c1c1c;
+    background-color:white;
+    outline: none;
+    margin-left:20px;
+    color:black
+}
+input{
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+.textwrap{
+    height:40px;
+    border-radius: 25px;
+    background-color: white;
+    width:100%
+}
+h2{
+    color:white;
+    z-index: 3;
+    text-align: center;
+    margin-top: 20px;
+}
+.forgotpass{
+    font-size: 10px !important;
+}
+.forgotpass:hover{
+    text-decoration: underline;
+    color:greenyellow
+}
